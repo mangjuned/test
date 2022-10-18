@@ -24,15 +24,15 @@ messageStyle: "none"
 </head>
 <body epub:type="bodymatter">
 <section epub:type="introduction" role="doc-introduction">
-<h1 class="chapz" id="c1"><a id="term-186"/><span aria-label="1" epub:type="pagebreak" id="pg_1" role="doc-pagebreak"/><a epub:type="backlink" href="C02a_toc.xhtml#rc1" role="doc-backlink"><span class="green"><span class="big1">1</span><br/>Introduction</span></a></h1>
+<h1 class="chapz" id="c1"><a id="term-186"/><span aria-label="1" epub:type="pagebreak" id="pg_1" role="doc-pagebreak"/><a epub:type="backlink" href="C02a_toc.html#rc1" role="doc-backlink"><span class="green"><span class="big1">1</span><br/>Introduction</span></a></h1>
 <p>The term <em>computer graphics</em> describes any use of computers to create and manipulate images. This book introduces the algorithmic and mathematical tools that can be used to create all kinds of images—realistic visual effects, informative technical illustrations, or beautiful computer animations. Graphics can be two- or three-dimensional; images can be completely synthetic or can be produced by manipulating photographs. This book is about the fundamental algorithms and mathematics, especially those used to produce synthetic images of three-dimensional objects and scenes.</p>
-<p>Actually doing computer graphics inevitably requires knowing about specific hardware, file formats, and usually a graphics API (see <a href="C06_chapter1.xhtml#sec1_3">Section 1.3</a>) or two. Computer graphics is a rapidly evolving field, so the specifics of that knowledge are a moving target. Therefore, in this book we do our best to avoid depending on any specific hardware or API. Readers are encouraged to supplement the text with relevant documentation for their software and hardware environment. Fortunately, the culture of computer graphics has enough standard terminology and concepts that the discussion in this book should map nicely to most environments.</p>
+<p>Actually doing computer graphics inevitably requires knowing about specific hardware, file formats, and usually a graphics API (see <a href="C06_chapter1.html#sec1_3">Section 1.3</a>) or two. Computer graphics is a rapidly evolving field, so the specifics of that knowledge are a moving target. Therefore, in this book we do our best to avoid depending on any specific hardware or API. Readers are encouraged to supplement the text with relevant documentation for their software and hardware environment. Fortunately, the culture of computer graphics has enough standard terminology and concepts that the discussion in this book should map nicely to most environments.</p>
 <aside class="boxed-text" epub:type="sidebar">
 <p class="noindent"><span class="green">API:</span> application program interface.</p>
 </aside>
 <p class="indent">This chapter defines some basic terminology and provides some historical background, as well as information sources related to computer graphics.</p>
 <section>
-<h2 id="sec1_1"><a id="index_term228"/><a id="term-12"/><a id="term-470"/><a id="term-533"/><a id="term-698"/><a id="term-731"/><a id="term-887"/><a id="term-1096"/><span aria-label="2" epub:type="pagebreak" id="pg_2" role="doc-pagebreak"/><a epub:type="backlink" href="C02a_toc.xhtml#rsec1_1" role="doc-backlink"><span class="green">1.1 Graphics Areas</span></a></h2>
+<h2 id="sec1_1"><a id="index_term228"/><a id="term-12"/><a id="term-470"/><a id="term-533"/><a id="term-698"/><a id="term-731"/><a id="term-887"/><a id="term-1096"/><span aria-label="2" epub:type="pagebreak" id="pg_2" role="doc-pagebreak"/><a epub:type="backlink" href="C02a_toc.html#rsec1_1" role="doc-backlink"><span class="green">1.1 Graphics Areas</span></a></h2>
 <p>Imposing categories on any field is dangerous, but most graphics practitioners would agree on the following major areas of computer graphics:</p>
 <ul class="list-bullet">
 <li>
@@ -68,7 +68,7 @@ messageStyle: "none"
 </ul>
 </section>
 <section>
-<h2 id="sec1_2"><a id="index_term225"/><a epub:type="backlink" href="C02a_toc.xhtml#rsec1_2" role="doc-backlink"><span class="green">1.2 Major Applications</span></a></h2>
+<h2 id="sec1_2"><a id="index_term225"/><a epub:type="backlink" href="C02a_toc.html#rsec1_2" role="doc-backlink"><span class="green">1.2 Major Applications</span></a></h2>
 <p>Almost any endeavor can make some use of computer graphics, but the major consumers of computer graphics technology include the following industries:</p>
 <ul class="list-bullet">
 <li>
@@ -98,20 +98,20 @@ messageStyle: "none"
 </ul>
 </section>
 <section>
-<h2 id="sec1_3"><a epub:type="backlink" href="C02a_toc.xhtml#rsec1_3" role="doc-backlink"><span class="green">1.3 Graphics APIs</span></a></h2>
+<h2 id="sec1_3"><a epub:type="backlink" href="C02a_toc.html#rsec1_3" role="doc-backlink"><span class="green">1.3 Graphics APIs</span></a></h2>
 <p>A key part of using graphics libraries is dealing with a <em>graphics API</em>. An <em>application program interface</em> (API) is a standard collection of functions to perform a set of related operations, and a graphics API is a set of functions that perform basic operations such as drawing images and 3D surfaces into windows on the screen.</p>
 <p>Every graphics program needs to be able to use two related APIs: a <a id="index_term451"/>graphics API for visual output and a user-interface API to get input from the user. There are currently two dominant paradigms for graphics and user-interface APIs. The first is the integrated approach, exemplified by Java, where the graphics and user-interface toolkits are integrated and portable <em>packages</em> that are fully standardized and supported as part of the language. The second is represented by Direct3D and OpenGL, where the drawing commands are part of a software library tied to a language such as C++, and the user-interface software is an independent entity that might vary from system to system. In this latter approach, it is problematic to write portable code, although for simple programs, it may be possible to use a portable library layer to encapsulate the system specific user-interface code.</p>
 <p>Whatever your choice of <a id="index_term224"/><a id="index_term56"/>API, the basic graphics calls will be largely the same, and the concepts of this book will apply.</p>
 </section>
 <section>
-<h2 id="sec1_4"><a id="index_term229"/><a epub:type="backlink" href="C02a_toc.xhtml#rsec1_4" role="doc-backlink"><span class="green">1.4 Graphics Pipeline</span></a></h2>
+<h2 id="sec1_4"><a id="index_term229"/><a epub:type="backlink" href="C02a_toc.html#rsec1_4" role="doc-backlink"><span class="green">1.4 Graphics Pipeline</span></a></h2>
 <p>Every desktop computer today has a powerful 3D <em>graphics pipeline</em>. This is a special software/hardware subsystem that efficiently draws 3D primitives in perspective. Usually, these systems are optimized for processing 3D triangles with shared vertices. The basic operations in the pipeline map the 3D vertex locations to 2D screen positions and shade the triangles so that they both look realistic and appear in proper back-to-front order.</p>
 <p><a id="term-399"/><a id="term-406"/><a id="term-556"/><a id="term-1143"/><span aria-label="5" epub:type="pagebreak" id="pg_5" role="doc-pagebreak"/>Although drawing the triangles in valid back-to-front order was once the most important research issue in computer graphics, it is now almost always solved using the z<em>-buffer</em>, which uses a special memory buffer to solve the problem in a brute-force manner.</p>
 <p>It turns out that the geometric manipulation used in the graphics pipeline can be accomplished almost entirely in a 4D coordinate space composed of three traditional geometric coordinates and a fourth <em>homogeneous</em> coordinate that helps with perspective viewing. These <a id="index_term266"/>4D coordinates are manipulated using 4 × 4 matrices and 4-vectors. The graphics pipeline, therefore, contains much machinery for efficiently processing and composing such matrices and vectors. This <a id="index_term370"/>4D coordinate system is one of the most subtle and beautiful constructs used in computer science, and it is certainly the biggest intellectual hurdle to jump when learning computer graphics. A big chunk of the first part of every graphics book deals with these coordinates.</p>
 <p>The speed at which images can be generated depends strongly on the number of triangles being drawn. Because interactivity is more important in many applications than visual quality, it is worthwhile to minimize the number of triangles used to represent a model. In addition, if the model is viewed in the distance, fewer triangles are needed than when the model is viewed from a closer distance. This suggests that it is useful to represent a model with a varying <em>level of detail</em> (<a id="index_term669"/>LOD).</p>
 </section>
 <section>
-<h2 id="sec1_5"><a id="index_term786"/><a epub:type="backlink" href="C02a_toc.xhtml#rsec1_5" role="doc-backlink"><span class="green">1.5 Numerical Issues</span></a></h2>
+<h2 id="sec1_5"><a id="index_term786"/><a epub:type="backlink" href="C02a_toc.html#rsec1_5" role="doc-backlink"><span class="green">1.5 Numerical Issues</span></a></h2>
 <p>Many graphics programs are really just 3D numerical codes. Numerical issues are often crucial in such programs. In the “old days,” it was very difficult to handle such issues in a robust and portable manner because machines had different internal representations for numbers, and even worse, handled exceptions in different and incompatible ways. Fortunately, almost all modern computers conform to the <em>IEEE floating-point</em> standard (IEEE Standards Association, 1985). This allows the programmer to make many convenient assumptions about how certain numeric conditions will be handled.</p>
 <p>Although IEEE floating-point has many features that are valuable when coding numeric algorithms, there are only a few that are crucial to know for most situations encountered in graphics. First, and most important, is to understand that there are three “special” values for real numbers in IEEE floating-point:</p>
 <ol class="list-order">
@@ -175,7 +175,7 @@ messageStyle: "none"
 <p class="noindent1">Here, the function <em>f</em> may return “ugly” values such as ∞ or NaN, but the <em>if</em> condition is still well-defined: it is false for <em>a</em> = NaN or <em>a</em> = –∞ and true for <em>a</em> = +∞. With care in deciding which values are returned, often the <em>if</em> can make the right choice, with no special checks needed. This makes programs smaller, more robust, and more efficient.</p>
 </section>
 <section>
-<h2 id="sec1_6"><a id="index_term226"/><a epub:type="backlink" href="C02a_toc.xhtml#rsec1_6" role="doc-backlink"><span class="green">1.6 Efficiency</span></a></h2>
+<h2 id="sec1_6"><a id="index_term226"/><a epub:type="backlink" href="C02a_toc.html#rsec1_6" role="doc-backlink"><span class="green">1.6 Efficiency</span></a></h2>
 <p>There are no magic rules for making code more efficient. Efficiency is achieved through careful tradeoffs, and these tradeoffs are different for different architectures. However, for the foreseeable future, a good heuristic is that programmers should pay more attention to memory access patterns than to operation counts. This is the opposite of the best heuristic of two decades ago. This switch has occurred because the speed of memory has not kept pace with the speed of processors. Since that trend continues, the importance of limited and coherent memory access for optimization should only increase.</p>
 <p>A reasonable approach to making code fast is to proceed in the following order, taking only those steps which are needed:</p>
 <ol class="list-order">
@@ -198,7 +198,7 @@ messageStyle: "none"
 <p>The most important of these steps is the first one. Most “optimizations” make the code harder to read without speeding things up. In addition, time spent upfront optimizing code is usually better spent correcting bugs or adding features. Also, beware of suggestions from old texts; some classic tricks such as using integers instead of reals may no longer yield speed because modern CPUs can usually perform floating-point operations just as fast as they perform integer operations. In all situations, profiling is needed to be sure of the merit of any optimization for a specific machine and compiler.</p>
 </section>
 <section>
-<h2 id="sec1_7"><a id="index_term504"/><a id="index_term502"/><a id="index_term230"/><a epub:type="backlink" href="C02a_toc.xhtml#rsec1_7" role="doc-backlink"><span class="green">1.7 Designing and Coding Graphics Programs</span></a></h2>
+<h2 id="sec1_7"><a id="index_term504"/><a id="index_term502"/><a id="index_term230"/><a epub:type="backlink" href="C02a_toc.html#rsec1_7" role="doc-backlink"><span class="green">1.7 Designing and Coding Graphics Programs</span></a></h2>
 <aside class="boxed-text" epub:type="sidebar">
 <p class="noindent">I believe strongly in the KISS (“keep it simple, stupid”) principle, and in that light, the argument for two classes is not compelling enough to justify the added complexity. —P.S.</p>
 </aside>
@@ -218,13 +218,13 @@ messageStyle: "none"
 <p class="list"><span class="green">vector3.</span> A 3D vector class analogous to vector2.</p>
 </li>
 <li>
-<p class="list"><span class="green">hvector.</span> A homogeneous vector with four components (see <a href="C13_chapter8.xhtml#c8">Chapter 8</a>).</p>
+<p class="list"><span class="green">hvector.</span> A homogeneous vector with four components (see <a href="C13_chapter8.html#c8">Chapter 8</a>).</p>
 </li>
 <li>
 <p class="list"><span class="green">rgb.</span> An RGB color that stores three components. You should also include operations for RGB addition, RGB subtraction, RGB multiplication, scalar multiplication, and scalar division.</p>
 </li>
 <li>
-<p class="list"><span class="green">transform.</span> A 4 × 4 matrix for transformations. You should include a matrix multiply and member functions to apply to locations, directions, and surface normal vectors. As shown in <a href="C12_chapter7.xhtml#c7">Chapter 7</a>, these are all different.</p>
+<p class="list"><span class="green">transform.</span> A 4 × 4 matrix for transformations. You should include a matrix multiply and member functions to apply to locations, directions, and surface normal vectors. As shown in <a href="C12_chapter7.html#c7">Chapter 7</a>, these are all different.</p>
 </li>
 <li>
 <p class="list"><span class="green">image.</span> A 2D array of RGB pixels with an output operation.</p>
